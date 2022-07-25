@@ -151,6 +151,9 @@ class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
                         }
                       },
                       pinTheme: PinTheme(
+                        backgroundImage: const DecorationImage(
+                          image: AssetImage('assets/verify.png')
+                        ),
                         shape: PinCodeFieldShape.box,
                         borderRadius: BorderRadius.circular(5),
                         fieldHeight: 50,
@@ -159,7 +162,7 @@ class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
                       ),
                       cursorColor: Colors.black,
                       animationDuration: const Duration(milliseconds: 300),
-                      enableActiveFill: true,
+                      enableActiveFill: false,
                       errorAnimationController: errorController,
                       controller: textEditingController,
                       keyboardType: TextInputType.number,

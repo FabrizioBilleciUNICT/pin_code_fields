@@ -40,6 +40,8 @@ class PinTheme {
   /// this defines the shape of the input fields. Default is underlined
   final PinCodeFieldShape shape;
 
+  final DecorationImage? backgroundImage;
+
   /// this defines the padding of each enclosing container of an input field. Default is [0.0]
   final EdgeInsetsGeometry fieldOuterPadding;
 
@@ -50,6 +52,7 @@ class PinTheme {
     this.borderWidth = 2,
     this.fieldOuterPadding = EdgeInsets.zero,
     this.shape = PinCodeFieldShape.underline,
+    this.backgroundImage,
     this.activeColor = Colors.green,
     this.selectedColor = Colors.blue,
     this.inactiveColor = Colors.red,
@@ -74,6 +77,7 @@ class PinTheme {
       double? fieldWidth,
       double? borderWidth,
       PinCodeFieldShape? shape,
+      DecorationImage? backgroundImage,
       EdgeInsetsGeometry? fieldOuterPadding}) {
     final defaultValues = PinTheme.defaults();
     return PinTheme.defaults(
@@ -105,6 +109,7 @@ class PinTheme {
           ? defaultValues.selectedFillColor
           : selectedFillColor,
       shape: shape == null ? defaultValues.shape : shape,
+      backgroundImage: backgroundImage,
       fieldOuterPadding: fieldOuterPadding == null
           ? defaultValues.fieldOuterPadding
           : fieldOuterPadding,
