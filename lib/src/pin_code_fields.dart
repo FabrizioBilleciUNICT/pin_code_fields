@@ -837,6 +837,7 @@ class _PinCodeTextFieldState extends State<PinCodeTextField>
               width: _pinTheme.fieldWidth,
               height: _pinTheme.fieldHeight,
               decoration: BoxDecoration(
+                image: _pinTheme.backgroundImage,
                 color: widget.enableActiveFill
                     ? _getFillColorFromIndex(i)
                     : Colors.transparent,
